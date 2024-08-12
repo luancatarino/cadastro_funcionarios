@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Atividade Prática</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body style="background-color: #ddebcf">
+    <section class="h-100 h-custom">
+      <div class="container py-3 h-100">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+          <div class="col-lg-8 col-xl-6">
+            <div class="card rounded-3">
+              <img
+                src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-registration/draw1.webp"
+                class="w-100"
+                style="
+                  border-top-left-radius: 0.3rem;
+                  border-top-right-radius: 0.3rem;
+                "
+                alt="Sample photo"
+              />
+              <div class="card-body p-4 p-md-6">
+                <h3 class="mb-3 pb-2 pb-md-0 mb-md-5 px-md-2">
+                  <div id="titleH3">Cadastro de Funcionários</div>
+                </h3>
+                <form id="form" class="px-md-2">
+                  <div class="row">
+                    <div class="col-md-6 mb-3">
+                      <h6 class="mb-3 pb-1">Tipo de Funcionário:</h6>
+
+                      <div class="form-check form-check-inline">
+                        <input
+                          class="form-check-input"
+                          type="radio"
+                          name="tipoFuncionario"
+                          id="gerente"
+                          value="gerente"
+                        />
+                        <label class="form-check-label" for="gerente"
+                          >Gerente</label
+                        >
+                      </div>
+
+                      <div class="form-check form-check-inline">
+                        <input
+                          class="form-check-input"
+                          type="radio"
+                          name="tipoFuncionario"
+                          id="desenvolvedor"
+                          value="desenvolvedor"
+                        />
+                        <label class="form-check-label" for="desenvolvedor"
+                          >Desenvolvedor</label
+                        >
+                      </div>
+                    </div>
+
+                    <div class="col-md-6 mb-3">
+                      <div
+                        id="campoDepartamento"
+                        data-mdb-input-init
+                        class="hidden form-outline"
+                      >
+                        <label class="form-label" for="departamento"
+                          >Departamento:</label
+                        >
+                        <input
+                          type="text"
+                          id="departamento"
+                          class="form-control form-control-sm"
+                        />
+                        <div id="errorDepartamento" class="error"></div>
+                      </div>
+
+                      <div
+                        id="campoLinguagem"
+                        data-mdb-input-init
+                        class="hidden form-outline"
+                      >
+                        <label class="form-label" for="linguagem"
+                          >Linguagem:</label
+                        >
+                        <input
+                          type="text"
+                          id="linguagem"
+                          class="form-control form-control-sm"
+                        />
+                        <div id="errorLinguagem" class="error"></div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div id="infoFuncionario">
+                    <div class="form-outline mb-3">
+                      <label for="nome" class="form-label">Nome:</label>
+                      <input
+                        type="text"
+                        id="nome"
+                        required
+                        class="form-control form-control-sm"
+                      />
+                      <div id="errorNome" class="error"></div>
+                    </div>
+                    <div class="form-outline mb-3">
+                      <label for="idade" class="form-label">Idade:</label>
+                      <input
+                        type="number"
+                        id="idade"
+                        required
+                        class="form-control form-control-sm"
+                      />
+                      <div id="errorIdade" class="error"></div>
+                    </div>
+                  </div>
+                  <button
+                    type="button"
+                    id="submitBtn"
+                    class="btn btn-success btn-lg"
+                    data-bs-toggle="modal"
+                    data-bs-target="#exampleModal"
+                  >
+                    Enviar
+                  </button>
+                </form>
+                <div id="resultado" class="hidden result">
+                  <div id="resultadoConteudo"></div>
+                  <button
+                    type="button"
+                    id="voltarBtn"
+                    class="btn btn-secondary btn-md"
+                  >
+                    Voltar
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="script.js"></script>
+  </body>
+</html>
